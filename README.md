@@ -13,10 +13,21 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 
 ## 📂 Repository Structure
 
+### 🔹 Code & Configuration
 - `train_deep.py`: Training script for the Deep Instruction dataset.
 - `train_diverse.py`: Training script for the Diverse Instruction dataset.
 - `livecodebench_eval.py`: Evaluation script adapted from LiveCodeBench.
 - `requirements.txt`: Dependencies required to run the project.
+
+### 🔹 Data & Logs (Evidence)
+- `deep_training_log.csv`: Raw training logs (Loss values) for Deep Instruction model.
+- `diverse_training_log.csv`: Raw training logs (Loss values) for Diverse Instruction model.
+- `results/`: **Full evaluation outputs.** This directory contains:
+    - Generated Python codes for all 41 problems.
+    - Detailed JSONL logs for every test case.
+    - Summary JSON files with Pass@1 scores.
+
+### 🔹 Visual Analysis
 - `deeplossfinal.png`: Loss analysis graph for the Deep Instruction model.
 - `diverselossfinal.png`: Loss analysis graph for the Diverse Instruction model.
 
@@ -32,7 +43,7 @@ To adapt the project to the Colab environment and specific hardware constraints,
 
 ## 📊 Benchmark Results (Pass@1)
 
-We evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems.
+We evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems. Detailed evaluation data is available in the `results/` directory.
 
 | Model | Best Checkpoint | Pass@1 Score | Problems Solved |
 | :--- | :--- | :--- | :--- |
@@ -45,7 +56,7 @@ The **Deep Instruction** model significantly outperformed both the Base model (+
 
 ## 📈 Training Analysis & Overfitting
 
-We monitored Train, Validation, and Test losses throughout the training process.
+We monitored Train, Validation, and Test losses throughout the training process. The raw data for these graphs is available in the `.csv` log files.
 
 ### 1. Deep Instruction Model
 ![Deep Instruction Loss Graph](deeplossfinal.png)
