@@ -43,7 +43,7 @@ To adapt the project to the Colab environment and specific hardware constraints,
 
 ## 📊 Benchmark Results (Pass@1)
 
-We evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems. Detailed evaluation data is available in the `results/` directory.
+We evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems. Detailed evaluation data is available in the `final_results` directory.
 
 | Model | Best Checkpoint | Pass@1 Score | Problems Solved |
 | :--- | :--- | :--- | :--- |
