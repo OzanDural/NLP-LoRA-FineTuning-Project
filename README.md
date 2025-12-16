@@ -73,15 +73,3 @@ In both training sessions, the **Test Loss (Green Line)** reached its minimum ar
 Install the necessary libraries:
 ```bash
 pip install -r requirements.txt
-
-## 🚀 How to Reproduce Results
-
-### 1. Setup
-First, download the `livecodebench_eval.py` script from the [CodeGen Repository](https://github.com/naholav/CodeGen) and place it in the root directory.
-
-### 2. Training
-To train the models, run the `train.py` script.
-*(Note: Edit the `DATASET_ID` variable inside `train.py` to switch between "Deep" and "Diverse" datasets).*
-
-```bash
-python train.py
