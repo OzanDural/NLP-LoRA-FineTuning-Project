@@ -14,8 +14,7 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 ## 📂 Repository Structure
 
 ### 🔹 Code & Configuration
-- `train_deep.py`: Training script for the Deep Instruction dataset.
-- `train_diverse.py`: Training script for the Diverse Instruction dataset.
+- `train.py`: The main training script. (Used for both Deep and Diverse datasets by modifying the configuration).
 - `requirements.txt`: Dependencies required to run the project.
 
 *(Note: The evaluation logic uses the `livecodebench_eval.py` script from the [original CodeGen repository](https://github.com/naholav/CodeGen).)*
@@ -55,22 +54,4 @@ I evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset cons
 **Conclusion:**
 The **Deep Instruction** model significantly outperformed both the Base model (+7.3%) and the Diverse Instruction model. This demonstrates that training with Chain-of-Thought (CoT) data is more effective for reasoning-based coding tasks than simply increasing data diversity.
 
-## 📈 Training Analysis & Overfitting
-
-I monitored Train, Validation, and Test losses throughout the training process. The raw data for these graphs is available in the `.csv` log files.
-
-### 1. Deep Instruction Model
-![Deep Instruction Loss Graph](deeplossfinal.png)
-
-### 2. Diverse Instruction Model
-![Diverse Instruction Loss Graph](diverselossfinal.png)
-
-### 🔍 Analysis
-In both training sessions, the **Validation Loss reached its minimum around Step 200**. As training continued to Step 300, the validation loss began to increase or plateau, and the benchmark performance dropped (e.g., Deep model dropped from 34.1% to 24.4%). This clearly indicates that **overfitting** started occurring after Step 200. Therefore, I selected **Step 200** as the optimal checkpoint.
-
-## 🚀 How to Reproduce Results
-
-### 1. Setup
-Install the necessary libraries:
-```bash
-pip install -r requirements.txt
+## 📈 Training Analysis & Over
