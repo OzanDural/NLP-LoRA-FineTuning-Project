@@ -22,7 +22,7 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 ### 🔹 Data & Logs (Evidence)
 - `deep_training_log.csv`: Raw training logs (Loss values) for Deep Instruction model.
 - `diverse_training_log.csv`: Raw training logs (Loss values) for Diverse Instruction model.
-- `results/`: **Full evaluation outputs.** This directory contains:
+- `final_results`: **Full evaluation outputs.** This directory contains:
     - Generated Python codes for all 41 problems.
     - Detailed JSONL logs for every test case.
     - Summary JSON files with Pass@1 scores.
