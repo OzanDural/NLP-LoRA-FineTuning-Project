@@ -7,7 +7,7 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 ## 🛠️ Environment & Hardware
 
 - **Platform:** Google Colab Pro
-- **GPU:** NVIDIA A100 (40GB)
+- **GPU:** NVIDIA A100 (80GB)
 - **Training Method:** LoRA (PEFT)
 - **Precision:** `bfloat16` (Brain Floating Point)
 
