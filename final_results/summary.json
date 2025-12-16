@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-12-15T22:20:22.001246",
+  "config": {
+    "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "livecodebench_version": "release_v5",
+    "date_range": "2408-2502",
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "model_types": [
+      "deep_instruction",
+      "diverse_instruction"
+    ],
+    "steps": [
+      99999
+    ],
+    "num_problems": 41
+  },
+  "results": [
+    {
+      "model_name": "base_model",
+      "model_type": "base",
+      "checkpoint_path": null,
+      "difficulty": "2408-2502_atcoder",
+      "num_problems": 41,
+      "timestamp": "2025-12-15T22:20:22.000707",
+      "stats": {
+        "total": 41,
+        "passed": 11,
+        "failed": 30,
+        "error": 0,
+        "no_tests": 0,
+        "pass_at_1": 0.2682926829268293
+      },
+      "pass_at_1": 0.2682926829268293,
+      "detailed_log": "results/livecodebench/detailed/base_model_2408-2502_atcoder.jsonl"
+    }
+  ]
+}
