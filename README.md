@@ -16,13 +16,14 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 ### 🔹 Code & Configuration
 - `train_deep.py`: Training script for the Deep Instruction dataset.
 - `train_diverse.py`: Training script for the Diverse Instruction dataset.
-- `livecodebench_eval.py`: Evaluation script adapted from LiveCodeBench.
 - `requirements.txt`: Dependencies required to run the project.
+
+*(Note: The evaluation logic uses the `livecodebench_eval.py` script from the [original CodeGen repository](https://github.com/naholav/CodeGen).)*
 
 ### 🔹 Data & Logs (Evidence)
 - `deep_training_log.csv`: Raw training logs (Loss values) for Deep Instruction model.
 - `diverse_training_log.csv`: Raw training logs (Loss values) for Diverse Instruction model.
-- `final_results`: **Full evaluation outputs.** This directory contains:
+- `final_results/`: **Full evaluation outputs.** This directory contains:
     - Generated Python codes for all 41 problems.
     - Detailed JSONL logs for every test case.
     - Summary JSON files with Pass@1 scores.
@@ -39,7 +40,7 @@ To adapt the project to the Colab environment and specific hardware constraints,
     The training scripts are configured to save checkpoints directly to Google Drive (`/content/drive/MyDrive/...`) to ensure data persistence during long training sessions.
 
 2.  **Flash Attention Adjustment:**
-    Although trained on an A100 GPU, we encountered library compatibility issues with Flash Attention 2 during the inference/evaluation phase. Therefore, the `use_flash_attention_2=True` argument was removed from `livecodebench_eval.py`. The evaluation runs in standard `bfloat16` mode.
+    Although trained on an A100 GPU, we encountered library compatibility issues with Flash Attention 2 during the inference/evaluation phase. Therefore, we used a modified version of the evaluation script where the `use_flash_attention_2=True` argument was removed. The evaluation runs in standard `bfloat16` mode.
 
 ## 📊 Benchmark Results (Pass@1)
 
@@ -69,6 +70,7 @@ In both training sessions, the **Validation Loss reached its minimum around Step
 
 ## 🚀 How to Reproduce Results
 
-To install the necessary libraries:
+### 1. Setup
+Install the necessary libraries:
 ```bash
 pip install -r requirements.txt
