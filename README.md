@@ -34,22 +34,22 @@ This project was conducted as part of the **CEN445 - Introduction to Data Visual
 
 ## ⚠️ Implementation Details & Modifications
 
-To adapt the project to the Colab environment and specific hardware constraints, the following modifications were made:
+To adapt the project to the Colab environment and specific hardware constraints, I made the following modifications:
 
 1.  **Google Drive Integration:**
-    The training scripts are configured to save checkpoints directly to Google Drive (`/content/drive/MyDrive/...`) to ensure data persistence during long training sessions.
+    I configured the training scripts to save checkpoints directly to Google Drive (`/content/drive/MyDrive/...`) to ensure data persistence during long training sessions.
 
 2.  **Flash Attention Adjustment:**
-    Although trained on an A100 GPU, we encountered library compatibility issues with Flash Attention 2 during the inference/evaluation phase. Therefore, we used a modified version of the evaluation script where the `use_flash_attention_2=True` argument was removed. The evaluation runs in standard `bfloat16` mode.
+    Although trained on an A100 GPU, I encountered library compatibility issues with Flash Attention 2 during the inference/evaluation phase. Therefore, I used a modified version of the evaluation script where the `use_flash_attention_2=True` argument was removed. The evaluation runs in standard `bfloat16` mode.
 
 ## 📊 Benchmark Results (Pass@1)
 
-We evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems. Detailed evaluation data is available in the `final_results` directory.
+I evaluated the models using the **LiveCodeBench (AtCoder - Easy)** dataset consisting of 41 coding problems. Detailed evaluation data is available in the `final_results` directory.
 
 | Model | Best Checkpoint | Pass@1 Score | Problems Solved |
 | :--- | :--- | :--- | :--- |
 | **Base Model (Qwen2.5-Coder)** | - | **26.83%** | 11 / 41 |
-| **Deep Instruction (Ours)** | **Step-200** | **34.15%** 🏆 | **14 / 41** |
+| **Deep Instruction (My Model)** | **Step-200** | **34.15%** 🏆 | **14 / 41** |
 | **Diverse Instruction** | Step-200 | **29.27%** | 12 / 41 |
 
 **Conclusion:**
@@ -57,7 +57,7 @@ The **Deep Instruction** model significantly outperformed both the Base model (+
 
 ## 📈 Training Analysis & Overfitting
 
-We monitored Train, Validation, and Test losses throughout the training process. The raw data for these graphs is available in the `.csv` log files.
+I monitored Train, Validation, and Test losses throughout the training process. The raw data for these graphs is available in the `.csv` log files.
 
 ### 1. Deep Instruction Model
 ![Deep Instruction Loss Graph](deeplossfinal.png)
@@ -66,7 +66,7 @@ We monitored Train, Validation, and Test losses throughout the training process.
 ![Diverse Instruction Loss Graph](diverselossfinal.png)
 
 ### 🔍 Analysis
-In both training sessions, the **Validation Loss reached its minimum around Step 200**. As training continued to Step 300, the validation loss began to increase or plateau, and the benchmark performance dropped (e.g., Deep model dropped from 34.1% to 24.4%). This clearly indicates that **overfitting** started occurring after Step 200. Therefore, **Step 200** was selected as the optimal checkpoint.
+In both training sessions, the **Validation Loss reached its minimum around Step 200**. As training continued to Step 300, the validation loss began to increase or plateau, and the benchmark performance dropped (e.g., Deep model dropped from 34.1% to 24.4%). This clearly indicates that **overfitting** started occurring after Step 200. Therefore, I selected **Step 200** as the optimal checkpoint.
 
 ## 🚀 How to Reproduce Results
 
