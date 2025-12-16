@@ -2,7 +2,7 @@
 
 This repository contains the implementation of a LoRA (Low-Rank Adaptation) fine-tuning project for the **Qwen2.5-Coder-1.5B-Instruct** model. The goal of this project is to enhance the code generation capabilities of the base model using two different dataset strategies: **Deep Instruction** (Chain-of-Thought) and **Diverse Instruction**.
 
-This project was conducted as part of the **CEN445 - Introduction to Data Visualization** course.
+This project was conducted as part of the **CEN471 - Natural Language Processing** course.
 
 ## 🛠️ Environment & Hardware
 
