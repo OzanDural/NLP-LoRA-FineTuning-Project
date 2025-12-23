@@ -68,6 +68,6 @@ I monitored Train, Validation, and Test losses throughout the training process. 
 In both training sessions, the **Test Loss (Green Line)** reached its minimum around **Step 200**. As training continued to Step 300, the Test Loss began to plateau or increase, while the benchmark performance dropped (e.g., Deep model dropped from 34.1% to 24.4%). This divergence between Training Loss (which kept decreasing) and Test Loss clearly indicates that **overfitting** started occurring after Step 200. Therefore, I selected **Step 200** as the optimal checkpoint.
 ### Qualitative Analysis
 A detailed analysis of the solved problems revealed distinct behaviors:
-•	The Deep Model excelled in problems requiring sequential logic and state tracking (e.g., abc369_b, where hand positions must be remembered). This suggests that training on the deep dataset improved the model's latent reasoning capabilities.
-•	The Diverse Model performed better on syntax-heavy, straightforward conditional tasks (e.g., abc370_a), likely due to exposure to a wider variety of code patterns.
+-	The Deep Model excelled in problems requiring sequential logic and state tracking (e.g., abc369_b, where hand positions must be remembered). This suggests that training on the deep dataset improved the model's latent reasoning capabilities.
+-	The Diverse Model performed better on syntax-heavy, straightforward conditional tasks (e.g., abc370_a), likely due to exposure to a wider variety of code patterns.
 
