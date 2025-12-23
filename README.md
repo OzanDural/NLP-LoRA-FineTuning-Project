@@ -70,4 +70,13 @@ In both training sessions, the **Test Loss (Green Line)** reached its minimum ar
 A detailed analysis of the solved problems revealed distinct behaviors:
 -	The Deep Model excelled in problems requiring sequential logic and state tracking (e.g., abc369_b, where hand positions must be remembered). This suggests that training on the deep dataset improved the model's latent reasoning capabilities.
 -	The Diverse Model performed better on syntax-heavy, straightforward conditional tasks (e.g., abc370_a), likely due to exposure to a wider variety of code patterns.
+-	## 🔗 Trained Models (Hugging Face)
+
+I have released the LoRA fine-tuned models on Hugging Face. You can access the checkpoints and model cards below:
+
+- 🧠 **Deep Instruction Model (Best Performance):** [Qwen2.5-Coder-Deep-Instruct-LoRA](https://huggingface.co/deneme0001/Qwen2.5-Coder-Deep-Instruct-LoRA)  
+  *(Trained on CodeGen-Deep-5K, achieved 34.15% Pass@1)*
+
+- 🎨 **Diverse Instruction Model:** [Qwen2.5-Coder-Diverse-Instruct-LoRA](https://huggingface.co/deneme0001/Qwen2.5-Coder-Diverse-Instruct-LoRA)  
+  *(Trained on CodeGen-Diverse-5K, focused on syntax robustness)*
 
