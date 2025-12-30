@@ -67,9 +67,12 @@ I monitored Train, Validation, and Test losses throughout the training process. 
 ### 🔍 Analysis
 In both training sessions, the **Test Loss (Green Line)** reached its minimum around **Step 200**. As training continued to Step 300, the Test Loss began to plateau or increase, while the benchmark performance dropped (e.g., Deep model dropped from 34.1% to 24.4%). This divergence between Training Loss (which kept decreasing) and Test Loss clearly indicates that **overfitting** started occurring after Step 200. Therefore, I selected **Step 200** as the optimal checkpoint.
 ### Qualitative Analysis
-A detailed analysis of the solved problems revealed distinct behaviors:
--	The Deep Model excelled in problems requiring sequential logic and state tracking (e.g., abc369_b, where hand positions must be remembered). This suggests that training on the deep dataset improved the model's latent reasoning capabilities.
--	The Diverse Model performed better on syntax-heavy, straightforward conditional tasks (e.g., abc370_a), likely due to exposure to a wider variety of code patterns.
+### 🔍 Key Findings
+Reasoning vs. Robustness: The Deep model thrives on logic-heavy tasks due to its Chain-of-Thought training, while the Diverse model is more robust in following specific output formats and simple if-else patterns.
+
+Overthinking Trap: In simple tasks (like abc370_a), the Deep model occasionally failed by "hallucinating complexity," whereas the Diverse model provided a direct and correct solution.
+
+Knowledge Preservation: The high number of "Common Success" problems indicates that LoRA fine-tuning effectively specialized the models without causing catastrophic forgetting of basic programming concepts.
 ### 📊 Comparative Performance Analysis (Step-200 Checkpoints)
 
 | Category | Count | Example Problems | Analysis & Behavioral Insights |
