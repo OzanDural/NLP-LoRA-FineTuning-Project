@@ -70,6 +70,13 @@ In both training sessions, the **Test Loss (Green Line)** reached its minimum ar
 A detailed analysis of the solved problems revealed distinct behaviors:
 -	The Deep Model excelled in problems requiring sequential logic and state tracking (e.g., abc369_b, where hand positions must be remembered). This suggests that training on the deep dataset improved the model's latent reasoning capabilities.
 -	The Diverse Model performed better on syntax-heavy, straightforward conditional tasks (e.g., abc370_a), likely due to exposure to a wider variety of code patterns.
+-	Category,Count,Example Problems,Analysis & Behavioral Insights
+🤝 Common Success,8,"abc365_a, abc372_a",Both models successfully preserved core Python syntax and basic arithmetic logic from the base model.
+🧠 Deep Exclusive,6,"abc369_b, abc377_a","Models solved tasks requiring multi-step logical inference and state tracking (e.g., tracking hand positions in a piano simulation)."
+🎨 Diverse Exclusive,4,"abc367_b, abc370_a","Models excelled at pattern matching and rigid formatting (e.g., removing trailing zeros or simple binary mapping)."
+🚫 Unsolved,23,"abc365_b, abc386_b",Problems that remain beyond the reasoning capacity of a 1.5B parameter model due to algorithmic complexity.
+📈 TOTAL PASS,-,Deep: 14/41 (34.1%),Diverse: 12/41 (29.3%)
+
 -	## 🔗 Trained Models (Hugging Face)
 
 I have released the LoRA fine-tuned models on Hugging Face. You can access the checkpoints and model cards below:
